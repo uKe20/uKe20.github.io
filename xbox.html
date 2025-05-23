@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #29a02f;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .contenedor-consolas {
+            text-align: left; 
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        header {
+            background-color: #3bca5f;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    
+        h2 {
+            font-size: 3rem;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            font-size: 1rem;
+        }
+        
+
+nav a:hover {
+    color: #d9c6f8;
+}
+a {
+            color: #328836;
+        }
+        
+    
+        a:visited {
+            color: #d892d8;
+        }
+        
+        a:hover {
+            color: #98cbff;
+        }
+
+        #sabias-que {
+    padding: 40px 20px;
+    background-color: #fefefe;
+    color: #222;
+    border-top: 5px dashed #00ff00;
+        }
+
+         #sabias-que h2 {
+    color: #3eb819;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 0 #fff;
+        }
+
+        .sabias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+        }
+
+        .card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 260px;
+    transition: transform 0.2s ease;
+        }
+
+       .card:hover {
+    transform: scale(1.05);
+        }
+
+        .card h3 {
+    font-size: 1.2rem;
+    color: #28d628;
+    margin-bottom: 10px;
+        }
+
+        .card p {
+    font-size: 1rem;
+    line-height: 1.4;
+        }
+        header {
+    background-color: #1e6124;  /* Color rojo claro para el fondo */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    display: block;
+}
+
+.menu-item a:hover {
+    color: #d9c6f8;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #d9c6f8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.boton-flotante {
+    font-size: 25px;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    background-color: #10bb19c9;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #7eff5ebb;
+}
+
+.boton-flotante:hover {
+    background-color: #89ff7e;
+    color: white;
+}
+
+.boton-flotante:active {
+    background-color: #87f56c; 
+    color: rgb(255, 255, 255); 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Menu principal</a></li>
+                <li class="menu-item"><a href="#Consolas">Consolas</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="dropbtn">Compañias</a>
+                    <div class="dropdown-content">
+                        <a href="Nintendo.html">Nintendo</a>
+                        <a href="playstation.html">PlayStation</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#sabias-que">¿Sabías que...?</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <header>
+        <section id="Menu"></section>
+        <h1>Xbox</h1>
+    </header>
+     <h2>Bienvenido a xbox: El futuro del gaming</h2>
+        <p> Sumérgete en la experiencia definitiva del gaming.
+            Explora un universo donde la potencia se encuentra con la pasión, y donde cada partida es una oportunidad para romper límites.
+            Consolas de última generación, Game Pass con cientos de títulos épicos, juego en la nube, y una comunidad global que nunca deja de jugar.
+            ¿Estás listo para llevar tu juego al siguiente nivel?
+            Esto es Xbox. Salta dentro.En Xbox, el juego es más que entretenimiento: es conexión, emoción y evolución constante. Aquí no solo juegas, vives cada partida como si fuera la primera. Nuestro compromiso es llevarte al límite de la experiencia interactiva con tecnología de vanguardia, mundos increíbles y una comunidad global que comparte tu misma pasión.
+        </p>
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Xbox-Logo.png" alt="Xbox logo">
+        <p>Salta dentro.
+            Explora. Conquista. Comparte. Vive.
+            Esto es Xbox. Donde empieza tu próxima aventura.</p>
+        <section id="Historia">
+            <h2>Historia y fundacion</h2>
+            <p>La historia de Xbox es la historia de cómo una idea audaz dentro de Microsoft cambió el rumbo del entretenimiento interactivo para siempre. A finales de los años 90, un pequeño grupo de ingenieros dentro de Microsoft, conocidos internamente como el "Equipo DirectX", empezó a preguntarse:
+                ¿Qué pasaría si combináramos la potencia de una PC con la simplicidad de una consola?
+                En un momento donde Sony dominaba con la PlayStation y Sega aún era relevante, Microsoft decidió entrar al mercado con fuerza. Así nació Xbox, nombre inspirado en la API gráfica de Microsoft, DirectX.
+            </p>
+            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/10/ps4-Psychonauts-1.jpg" alt="Psychonauts - Xbox">
+        </section>   
+        <section id="Presidentes">
+            <h2>Presidentes de Xbox</h2>
+            <ul>
+                <h3>Robbie Bach (2000 a 2010)</h3>
+                <p>Bach fue el principal impulsor de la creación de Xbox, liderando el equipo que desarrolló la primera consola de la marca. Bajo su liderazgo, Xbox se lanzó con éxito en 2001, marcando el inicio de la incursión de Microsoft en el mundo de los videojuegos.
+                </p>
+                <img src="https://d.ibtimes.com/en/full/2097936/robbie-bach.jpg?w=736&f=ea90e2b064a388d5d2de39776a70a7b9" alt="Robbie Bach">
+                
+                <h3>Don Mattrick (2010 a 2013)</h3>
+                <p>Mattrick supervisó el lanzamiento de Xbox One en 2013. Su enfoque en la integración de Xbox como un centro de entretenimiento todo en uno fue una de las características distintivas de esa generación. Sin embargo, su gestión también estuvo marcada por controversias, especialmente relacionadas con las políticas de DRM y la conexión siempre activa, lo que llevó a una recepción crítica negativa. 
+                </p>
+                <img src="https://th.bing.com/th/id/R.049a211c1d3ac6510abc8f6372c1fe16?rik=AKbpBQIpSNTeOw&riu=http%3a%2f%2fassets.sbnation.com%2fassets%2f2865317%2fdon_mattrick_xbox.jpg&ehk=8e3Gk4Luqpfm1I4tMsqlj6Hta3kG8WtN2njgLQJL%2bR4%3d&risl=&pid=ImgRaw&r=0" alt="Don Mattrick">
+                
+                <h3>Phil Spencer (2014 a Presente)</h3>
+                <p>Director Ejecutivo de Microsoft Gaming. Spencer asumió el liderazgo de Xbox en un momento crítico, tras las críticas al lanzamiento de Xbox One. Bajo su dirección, Xbox se centró nuevamente en los videojuegos, introduciendo iniciativas como Xbox Game Pass, retrocompatibilidad, y la expansión hacia PC y la nube. También supervisó adquisiciones clave como Mojang (Minecraft), Bethesda y Activision Blizzard. 
+                </p>
+                <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/01/Xbox-E3-2019-Phil-Spencer.jpg" alt="Phill Spencer">
+
+                <h3>Sara Bond (2023 a Presente)</h3>
+                <p> Ha promovido la diversidad y la accesibilidad en los videojuegos, implementando herramientas para desarrolladores y apoyando a creadores de comunidades subrepresentadas. También jugó un papel crucial en la negociación de acuerdos estratégicos, como el de Activision Blizzard, asegurando la expansión de Xbox en la nube
+                </p>
+                <img src="https://flowgames.gg/wp-content/uploads/2023/09/sarah-bond-xbox-acredita-futuro-ia.jpg" alt="Sara Bond">
+            </ul>
+            <section id="Consolas">
+                <h2>Desarrollo de consolas</h2>
+            </section>
+            
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Xbox</h2>
+                <p>La Xbox fue desarrollada por un pequeño equipo de desarrolladores de videojuegos contratados por Microsoft. Microsoft retrasó en varias ocasiones la noticia de su nueva consola, y finalmente fue revelado como proyecto a finales de 1999, a raíz de las entrevistas con Bill Gates. Gates dijo que un dispositivo de juego de entretenimiento era esencial para la convergencia multimedia en los nuevos tiempos del ocio digital. El 10 de marzo de 2000, fue confirmado el nuevo proyecto Xbox, mediante un comunicado oficial de Microsoft.
+                Entonces, Microsoft lanzó en 2001 su Xbox, fue su primera consola de sobremesa (en colaboración con Intel) y compitió contra la PlayStation 2, la segunda consola de Sony, la Gamecube de Nintendo y el Dreamcast de Sega.</p>
+                <img src="https://th.bing.com/th/id/R.46c55e428cd5caeb799895f98515e1a2?rik=nVxpWvtnH%2fyDwA&pid=ImgRaw&r=0" alt="Xbox clasica">
+                </div>
+            </section>
+            
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Xbox 360</h2>
+                <p>Xbox 360 es la segunda videoconsola de sobremesa producida por Microsoft. Fue desarrollada en colaboración con IBM y ATI y lanzada en América del Sur, América del Norte, Japón, Europa y Australia entre 2005 y 2006. Su servicio Xbox Live permite a los jugadores competir en línea y descargar contenidos como juegos arcade, demos, tráileres, programa de televisión y películas. La Xbox 360 es la sucesora directa de la Xbox, y compitió con la PlayStation 3 de Sony y Wii de Nintendo como parte de las videoconsolas de séptima generación.[6]​
+                Como principales características, están su unidad central de procesamiento basado en un IBM PowerPC y su unidad de procesamiento gráfico que soporta la tecnología de Shaders Unificados. El sistema incorpora un puerto especial para agregar un disco duro externo y es compatible con la mayoría de los aparatos con conector USB gracias a sus puertos USB 2.0. Los accesorios de este sistema pueden ser utilizados en una computadora personal como son los mandos y el volante Xbox 360.</p>
+                <img src="https://fpschampion.com/wp-content/uploads/2023/07/Xbox-360-scaled.webp" alt="Xbox 360">
+                </div>
+            </section>
+
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Xbox One</h2>
+                <p>La Xbox One es una consola de octava generación y la tercera videoconsola de sobremesa producida por Microsoft. Fue presentada el 21 de mayo de 2013 en la Xbox Reveal y sus características fueron dada a conocer el 10 de junio de 2013 en el E3. Es la sucesora de la Xbox 360 y actualmente compite con la PlayStation 4 de Sony y la Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013[12]​ a un precio de 499 dólares en Estados Unidos.[13]​
+                La nueva consola cuenta con 8 núcleos de 64 bits, 8 GB de memoria RAM, 500 GB de disco duro y un lector Blu-Ray. Incluye además conexiones USB 3.0, HDMI in-out y WI-FI 802.11n Wireless. También el Kinect 2.0 cuenta con una cámara de 1080p que procesa 2 GB de datos por segundo con un tiempo de respuesta de 13 milésimas de segundo</p>
+                <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2013/05/225410-especificaciones-xbox-one-asi-es-nueva-consola.png?tf=1920x" alt="Xbox one">
+                </div>
+            </section>
+
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Xbox series S/X</h2>
+                <p>Nintendo 64 (ニンテンドウ64?) es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D. Compitió en el mercado de la quinta generación con Saturn de Sega y PlayStation de Sony; esta última, creada a partir de diseños descartados previamente por Nintendo.
+                 Incorporó en su arquitectura un procesador principal de 64 bits. El soporte de almacenamiento de los juegos era en forma de cartuchos, la mayoría de ellos con memoria interna. El uso de este tipo de almacenamiento le supuso una seria desventaja comercial frente a sus competidores, ya que encarecía los costes de producción lo que aumentaba el precio final y además era de una capacidad de almacenamiento menor al de un CD-ROM. Técnicamente, la utilización de cartuchos ofreció algunas ventajas frente al formato CD-ROM, siendo esta la idea que mantenía Nintendo frente a la competencia. El cartucho tuvo tiempos de acceso al sistema mucho más cortos, haciendo posible la inclusión de coprocesadores y otros chips dentro del cartucho y técnicas como streaming en tiempo real para mejorar las capacidades de los juegos, logrando ampliar su vida útil; y en un principio parecía que podría ser más económico por no pagar derechos ("regalías" o "royalties") por uso del formato CD-ROM, ni una unidad lectora para el mismo que sería además mucho más delicada que una ranura o slot para cartuchos. Sin embargo, la escasa capacidad del cartucho en comparación con el CD-ROM supuso la ausencia casi total de cinemáticas pregrabadas, una merma en la calidad del sonido y una falta de espacio para recursos como texturas y número de escenarios.</p>
+                <img src="https://www.stuff.tv/wp-content/uploads/sites/2/2020/09/xbox-series-x-vs-series-s-main.jpg" alt="Xbox series S/X">
+                </div>
+            </section>
+
+            <section id="sabias-que">
+                <h2>¿Sabías que...?</h2>
+                <div class="sabias-container">
+                    <div class="card">
+                        <h3>🎮 Xbox no siempre se llamó así</h3>
+                        <p>Su nombre original era “DirectX Box”, por la tecnología gráfica de Microsoft.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 Halo fue su salvavidas</h3>
+                        <p>El éxito de Halo: Combat Evolved evitó que la primera Xbox fracasara.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 Xbox revolucionó el juego en línea</h3>
+                        <p>Con Xbox Live, fue la primera consola en ofrecer multijugador online estable y masivo.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 Fue creada por ingenieros rebeldes de Microsoft</h3>
+                        <p>Un grupo interno modificó PCs para convertirlas en la primera consola Xbox.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 No tienes que ponerla de pie</h3>
+                        <p>La Xbox Series X funciona tanto vertical como horizontalmente, según tu espacio.</p>
+                    </div>
+                </div>
+            </section>
+
+            <a href="#Menu" class="boton-flotante">Volver al principio</a>
+
+            <giscus-widget></giscus-widget>
+            
+            <script src="https://giscus.app/client.js"
+        data-repo="uKe20/uKe20.github.io"
+        data-repo-id="R_kgDOOve9bw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOve9b84CqhP3"
+        data-mapping="og:title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+</script>
+                 
+</body>
+</html>
