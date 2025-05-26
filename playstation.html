@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3068e0;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .contenedor-consolas {
+            text-align: left; 
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        header {
+            background-color: #3a2f96;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    
+        h2 {
+            font-size: 3rem;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            font-size: 1rem;
+        }
+        
+
+nav a:hover {
+    color: #d9c6f8;
+}
+a {
+            color: #5f33ff;
+        }
+        
+    
+        a:visited {
+            color: #d892d8;
+        }
+        
+        a:hover {
+            color: #98cbff;
+        }
+
+        #sabias-que {
+    padding: 40px 20px;
+    background-color: #fefefe;
+    color: #222;
+    border-top: 5px dashed #4b228d;
+        }
+
+         #sabias-que h2 {
+    color: #3e49ee;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 0 #fff;
+        }
+
+        .sabias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+        }
+
+        .card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 260px;
+    transition: transform 0.2s ease;
+        }
+
+       .card:hover {
+    transform: scale(1.05);
+        }
+
+        .card h3 {
+    font-size: 1.2rem;
+    color: #2856d6;
+    margin-bottom: 10px;
+        }
+
+        .card p {
+    font-size: 1rem;
+    line-height: 1.4;
+        }
+        header {
+    background-color: #99b6ec;  /* Color rojo claro para el fondo */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 8px 15px;
+    display: block;
+}
+
+.menu-item a:hover {
+    color: #d9c6f8;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #d9c6f8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.boton-flotante {
+    font-size: 25px;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    background-color: #1b10bb;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #5e6eff;
+}
+
+.boton-flotante:hover {
+    background-color: #1133f5;
+    color: white;
+}
+
+.boton-flotante:active {
+    background-color: #7a6cf5; 
+    color: black; 
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Menu principal</a></li>
+                <li class="menu-item"><a href="#Consolas">Consolas</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="dropbtn">Compañias</a>
+                    <div class="dropdown-content">
+                        <a href="xbox.html">Xbox</a>
+                        <a href="Nintendo.html">Nintendo</a>
+                    </div>
+                </li>
+                <li class="menu-item"><a href="#sabias-que">¿Sabías que...?</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <header>
+        <section id="Menu"></section>
+        <h1>PlayStation</h1>
+    </header>
+     <h2>Más que una consola, una revolución</h2>
+        <p> Desde su lanzamiento en 1994, PlayStation cambió la forma en que jugamos. 
+    Con gráficos innovadores, historias inolvidables y títulos legendarios como 
+    <em>Final Fantasy VII</em>, <em>God of War</em> o <em>Spider-Man</em>, esta marca se ha ganado un lugar en la historia del gaming.
+    Ya sea que hayas comenzado con la PS1 o vivas la experiencia en la PS5, 
+    PlayStation es sinónimo de entretenimiento sin límites.
+        </p>
+        <img src="https://th.bing.com/th/id/R.36476b18634994b2964ea9e3183d8e9a?rik=L3fnX9BvH%2ftl%2fA&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f05%2femblem-PlayStation.png&ehk=iCOYORQCMP1aKQpv3RJ%2fe%2bI7CSbEXGm1KM4cZ%2bfng1s%3d&risl=&pid=ImgRaw&r=0" alt="PlayStation logo">
+        <p>PlayStation: Juega sin limites</p>
+        <section id="Historia">
+            <h2>Historia y fundacion</h2>
+            <p>
+    Todo comenzó en los años 90, cuando Sony y Nintendo intentaron crear una consola conjunta. El proyecto fracasó, 
+    pero Sony decidió continuar por su cuenta. Así nació la <strong>PlayStation original</strong> en 1994, 
+    revolucionando la industria con juegos en CD y gráficos en 3D.
+  </p>
+  <p>
+    En 2000 llegó la <strong>PlayStation 2</strong>, la consola más vendida de todos los tiempos, 
+    que combinó videojuegos y reproducción de DVD. Luego, la <strong>PS3</strong> introdujo el Blu-ray y el juego en línea.
+  </p>
+  <p>
+    La <strong>PS4</strong> consolidó a Sony como líder con experiencias más sociales y gráficas de alto nivel. 
+    Hoy, con la <strong>PlayStation 5</strong>, la marca apuesta por la velocidad del SSD, el trazado de rayos y títulos de nueva generación.
+  </p>
+  <p>
+    A lo largo de más de 25 años, PlayStation ha pasado de ser un experimento a convertirse en un ícono global del entretenimiento.
+  </p>
+            <img src="https://th.bing.com/th/id/OIP.MHD_OcJ53lrpV_tEgsttEAHaFr?cb=iwc2&rs=1&pid=ImgDetMain" alt="PlayStation 1">
+        </section>   
+        <section id="Presidentes">
+            <h2>Presidentes de PlayStation</h2>
+            <ul>
+                <h3>🎮 Ken Kutaragi (1993 a 2007)</h3>
+                <p>Conocido como el "Padre de PlayStation", fue el principal arquitecto de la PlayStation original, la PS2 y la PS3. Introdujo innovaciones como el uso de CD-ROM y el procesador Emotion Engine, revolucionando la industria del videojuego .
+                </p>
+                <img src="https://media.vandalimg.com/common/1200x800/20081111248.jpg" alt="Ken Kutaragi">
+                
+                <h3>🎮 Kazuo Hirai (2006 a 2011)</h3>
+                <p>Lideró la transición hacia la PS3, enfrentando desafíos financieros y estratégicos. Fue fundamental en la integración de PlayStation dentro de la estrategia global de Sony .
+                </p>
+                <img src="https://i.mkt.lu/cont/2340634/800/576/kazuo-hirai.jpg" alt="Kazuo Hirai">
+                
+                <h3>🎮 Andrew House (2011 a 2017)</h3>
+                <p>Supervisó el éxito de la PS4, enfocándose en la experiencia del jugador y en la expansión de servicios como PlayStation Plus. Bajo su liderazgo, PlayStation consolidó su posición en el mercado .
+                </p>
+                <img src="https://i.blogs.es/240ae0/1200px-andrew_house_3/1366_2000.jpg" alt="Andrew House">
+
+                <h3>🎮 John Kodera (2017 a 2019)</h3>
+                <p>Introdujo innovaciones en servicios como PlayStation Plus, fortaleciendo la oferta digital y mejorando la experiencia en línea para los usuarios.
+                </p>
+                <img src="https://observatoriodegames.com.br/wp-content/uploads/2021/01/john-1024x576.jpg" alt="John Kodera">
+
+                <h3>🎮 Jim Ryan (2019 a 2023)</h3>
+                <p>Lideró el lanzamiento de la PS5, impulsando la expansión global de PlayStation y adaptándose a las nuevas demandas del mercado de videojuegos .</p>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/HWCKXXEXV5C67P3S4PELM7BWBA.jpg" alt="Jim Ryan">
+
+                <h3>🎮 Hiroki Totoki (2024 a Presente)</h3>
+                <p>Actualmente lidera la división de videojuegos de Sony, enfrentando los desafíos de un mercado en constante evolución y manteniendo el legado de innovación de PlayStation .</p>
+                <img src="https://cdn-3.expansion.mx/dims4/default/ed7a1a0/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F86%2Fc9%2F301a1e084dc98bacb67f56a33b5b%2Fquien-es-hiroki-totoki-sony-ceo-playstation.jpg" alt="Hiroki Totoki">
+            </ul>
+            <section id="Consolas">
+                <h2>Desarrollo de consolas</h2>
+            </section>
+            
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>PlayStation</h2>
+                <p>Primera videoconsola lanzada por SCE el 3 de diciembre de 1994 (Japón) y septiembre de 1995 (Norteamérica y Europa). Fue ideada en principio como un sistema con formato CD-ROM para Nintendo, en respuesta al Sega CD. Cuando el proyecto fue cancelado, Sony rediseñó el sistema para convertirla en una consola de sobremesa con la que pretendía competir en el mercado de las 32 bits. Fue descontinuada el 23 de marzo de 2006, convirtiéndola en una consola que duró dos generaciones: quinta y sexta.</p>
+                <img src="https://m.media-amazon.com/images/I/51Ojfhv3l7L._AC_UF1000,1000_QL80_.jpg" alt="PlayStation 1">
+                </div>
+            </section>
+            
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Playstation 2</h2>
+                <p>Salió al mercado mundial el 4 de marzo del 2000. Su mayor característica es un procesador central conocido como Emotion Engine, y presentaba un formato de DVD. Ha sido la consola con más ventas de la historia. Los principales motivos de su gran éxito fueron: un lector de DVD y CD, su gran cantidad de juegos (unos 2700, de hecho la cifra total no se conoce con exactitud) y ser retro compatible con su predecesora: la PlayStation. Fue descontinuada el 4 de enero de 2013, convirtiendo a la PlayStation 2 en una consola que duró tres generaciones: sexta, séptima y octava.
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/PS2-Versions.jpg/1200px-PS2-Versions.jpg" alt="Ps 2">
+                </div>
+            </section>
+
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>Playstation 3</h2>
+                <p>Lanzada el 10 de noviembre de 2006, PS3 cuenta con un microprocesador Cell que desarrolló junto con Toshiba e IBM. La unidad procesadora gráfica, la RSX Reality Synthesizer, fue desarrollada de forma conjunta por Sony y NVidia. La consola cuenta además con un sistema unificado de juegos en línea (PlayStation Network) y soporte de contenidos en formato Blu-ray. Posteriormente a su lanzamiento fue lanzado el sistema de control compatible PlayStation Move. Fue descontinuada el 29 de mayo de 2017, convirtiéndola en una consola que duró dos generaciones: séptima y octava.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sony-PlayStation-3-2001A-wController-L.jpg/1200px-Sony-PlayStation-3-2001A-wController-L.jpg" alt="Ps 3">
+                </div>
+            </section>
+
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>PlayStation 4</h2>
+                <p>Anunciada el día 20 de febrero del 2013, es la sucesora de la PlayStation 3 y forma parte de las videoconsolas de octava generación. Su lanzamiento fue el 15 de noviembre de 2013 en América, el 29 de noviembre de 2013 en Europa y el 22 de febrero de 2014 en Japón.</p>
+                <img src="https://m.media-amazon.com/images/I/51t0bPwu8uL.jpg" alt="Ps 4">
+                </div>
+            </section>
+
+            <section id="Consolas">
+                <div class="contenedor-consolas">
+                <h2>PlayStation 5</h2>
+                <p>Fue anunciada el 11 de junio de 2020, siendo la sucesora de la PlayStation 4 y es una de las primeras consolas en dar comienzo a la novena generación. La consola contará con dos modelos: La PS5 estándar con lector de discos Blu-ray Ultra HD y una PS5 Digital Edition sin el lector. El nuevo mando DualSense tiene un diseño moderno y adaptado al jugador. Este nuevo modelo tiene una capacidad de resolución de vídeo en 8K, es compatible con la tecnología de Ray Tracing y un procesador AMD Zen 2. Su fecha de lanzamiento fue el 12 de noviembre de 2020 en Norteamérica, Japón, Australasia y Corea del Sur y el 19 de noviembre de 2020 para el resto del mundo.</p>
+                <img src="https://m.media-amazon.com/images/I/51QKZfyi-dL.jpg" alt="Ps 5">
+                </div>
+            </section>
+
+            <section id="sabias-que">
+                <h2>¿Sabías que...?</h2>
+                <div class="sabias-container">
+                    <div class="card">
+                        <h3>🎮 La primera PlayStation nació de una traición</h3>
+                        <p>Originalmente, Sony trabajaba con Nintendo para crear una consola con lector de CD, pero Nintendo canceló el acuerdo. Así nació la PlayStation original en 1994.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 La PS2 es la consola más vendida de la historia</h3>
+                        <p>Con más de 155 millones de unidades vendidas, la PlayStation 2 aún mantiene el récord de la consola de videojuegos más vendida del mundo.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 Kratos casi fue azul</h3>
+                        <p>Durante el desarrollo de God of War, los diseñadores probaron varios colores para Kratos. Estuvieron cerca de hacerlo azul antes de decidirse por el icónico rojo.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 La X en el mando no es una equis</h3>
+                        <p>En Japón, el botón “X” del control de PlayStation originalmente significaba “cancelar”, y el “O” era “aceptar”. Esta convención se invirtió en Occidente.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎮 Final Fantasy VII salvó a PlayStation</h3>
+                        <p>Square Enix dejó de trabajar con Nintendo por limitaciones técnicas del cartucho, y lanzó Final Fantasy VII en PS1, convirtiéndolo en uno de los juegos más importantes de la consola.</p>
+                    </div>
+                </div>
+            </section>
+
+            <a href="#Menu" class="boton-flotante">Volver al principio</a>
+
+            <script src="https://giscus.app/client.js"
+        data-repo="uKe20/uKe20.github.io"
+        data-repo-id="R_kgDOOve9bw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOve9b84CqhP3"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+
+</script>
+            
+                 
+</body>
+</html>
